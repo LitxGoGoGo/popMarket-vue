@@ -8,9 +8,9 @@ import "nprogress/nprogress.css"
 import store from '@/store'
 const requests = axios.create({
   // 基础路径,可以手动省略写/api
-  baseURL:'/api',
+  baseURL: '/api',
   //代表请求超时的事件
-  timeout:5000,
+  timeout: 5000,
 })
 //请求拦截器,在发送请求之前可以做一些事情
 requests.interceptors.request.use((config) => {
@@ -28,7 +28,7 @@ requests.interceptors.response.use((res) => {
   //进度条结束
   nprogress.done();
   return res.data
-},(error) => {
+}, (error) => {
   //响应失败的回调函数
   return Promis.reject(new Error('faile'))
 });

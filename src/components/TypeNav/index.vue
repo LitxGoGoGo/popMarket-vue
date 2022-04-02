@@ -4,9 +4,9 @@
       <div @mouseleave="leaveShow" @mouseenter="enterShow">
         <h2 class="all">全部商品分类</h2>
         <transition>
-          <div class="sort" v-show="show">
+          <div class="sort " v-show="show">
             <div class="all-sort-list2" @click="goSearch">
-              <div class="item" v-for="(c1, index) in categoryList" :key="c1.categoryId" :class="{ cur: currentIndex == index }">
+              <div class="item " v-for="(c1, index) in categoryList" :key="c1.categoryId" :class="{ cur: currentIndex == index }">
                 <h3 @mouseenter="changeIndex(index)">
                   <a :data-categoryName="c1.categoryName" :data-category1Id="c1.categoryId">{{ c1.categoryName }}</a>
                 </h3>
@@ -151,6 +151,7 @@ export default {
       z-index: 999;
 
       .all-sort-list2 {
+        overflow: hidden;
         .item {
           h3 {
             line-height: 30px;

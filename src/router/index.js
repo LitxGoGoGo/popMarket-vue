@@ -24,8 +24,8 @@ VueRouter.prototype.push = function (location, resolve, reject) {
 //配置路由
 export default new VueRouter({
   routes,
-  scrollBehavior (to, from, savedPosition) {
+  scrollBehavior(to, from, savedPosition) {
     // return 期望滚动到哪个的位置,y代表滚动条最上方
-    return {x:0,y:0}
+    return { x: 0, y: 0 }
   }
 })
